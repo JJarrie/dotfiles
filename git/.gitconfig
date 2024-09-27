@@ -1,4 +1,5 @@
 [core]
+  editor = nvim
 	pager = delta
 
 [interactive]
@@ -14,8 +15,5 @@
 [diff]
 	colorMoved = default
 
-[user]
-	email = jeremy.jarrie@protonmail.com
-	name = Jérémy Jarrié
 [init]
 	defaultBranch = main

@@ -15,6 +15,10 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -28,10 +32,10 @@ font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+tiling_drag modifier titlebar
 
 # start a terminal
-#old bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec --no-startup-id /usr/bin/wezterm start --always-new-process
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -170,4 +174,20 @@ bindsym $mod+r mode "resize"
 #-old-#}
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id synergy
+
+gaps inner 7
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
+
+exec_always --no-startup-id autotiling
+
+client.focused          #b4befe #1e1e2e #cdd6f4 #f6e0dc #74c7ec
+client.focused_inactive #6c7086 #1e1e2e #cdd6f4 #f6e0dc #cba6f7
+client.unfocused        #6c7086 #1e1e2e #cdd6f4 #f6e0dc #cba6f7
+client.urgent           #fab387 #1e1e2e #fab387 #6c7086 #f38ba8
+client.placeholder      #6c7086 #1e1e2e #cdd6f4 #6c7086 #cba6f7
+client.background       #1e1e2e
+
+for_window [class=".*"] border pixel 1
 
