@@ -1,5 +1,6 @@
 # import file
 include ~/.config/i3/keybinding.conf
+include ~/.config/i3/autostart.conf
 include ~/.config/i3/window.conf
 
 # main mod
