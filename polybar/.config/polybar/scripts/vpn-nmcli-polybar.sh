@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VPN_ENTRY="SmileWgGalaxy"
+VPN_ENTRY="SmileWgMpl"
 GREP_VPN_WORD="Smile"
 
 ACTIVE_CONNECTION=$(nmcli --mode tabular --terse connection show --active | grep $GREP_VPN_WORD | cut -d ':' -f1) || true
