@@ -1,0 +1,25 @@
+set -g mouse on
+set -g default-terminal "tmux-256color"
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+
+unbind C-b
+set -g prefix C-Space
+bind C-Space send-prefix
+
+# Plugins utiles
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tpm'
+
+# Sauvegarde automatique
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '10'
+
+# Statut sobre
+set -g status-left "#[fg=green][#S]"
+set -g status-right "#[fg=cyan]%Y-%m-%d #[fg=yellow]%H:%M #[fg=white]| #[fg=magenta]#(whoami)@#H"
+
+# TPM
+run '~/.tmux/plugins/tpm/tpm'
+

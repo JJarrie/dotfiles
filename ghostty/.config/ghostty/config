@@ -1,0 +1,7 @@
+theme = catppuccin-mocha.conf
+window-decoration = none
+
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+command = ~/.config/ghostty/ghostty-tmux.sh
