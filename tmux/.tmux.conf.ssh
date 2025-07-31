@@ -17,8 +17,9 @@ set -g @continuum-restore 'on'
 set -g @continuum-save-interval '10'
 
 # Statut sobre
-set -g status-left "#[fg=green][#S]"
-set -g status-right "#[fg=cyan]%Y-%m-%d #[fg=yellow]%H:%M #[fg=white]| #[fg=magenta]#(whoami)@#H"
+set -g status-style bg=default,fg=white
+set -g status-left "#[fg=#89b4fa][#S]"
+set -g status-right "#[fg=#f5e0dc]%Y-%m-%d #[fg=#fab387]%H:%M #[fg=#cba6f7]| #[fg=#f38ba8]#(whoami)@#H"
 
 # TPM
 run '~/.tmux/plugins/tpm/tpm'
