@@ -1,7 +1,9 @@
 set fish_greeting
 set -U EDITOR vim
 set -U SHELL fish
-oh-my-posh init fish --config ~/.config/fish/themes/catppuccin_mocha.omp.json | source
+
+starship init fish | source
+
 zoxide init fish | source
 
 alias vim='nvim'
