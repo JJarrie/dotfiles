@@ -55,18 +55,27 @@ ignore_dbusclose = false
 mouse_left_click = do_action
 mouse_middle_click = close_all
 mouse_right_click = close_current
+highlight = "#89b4fa"
 
 [experimental]
 per_monitor_dpi = false
 
 [urgency_low]
-background = "#24273a"
+background = "#1e1e2e"
 foreground = "#cdd6f4"
 script = ~/.config/dunst/scripts/notification.sh
 timeout = 2
 
 [urgency_critical]
-background = "#24273a"
+background = "#1e1e2e"
 foreground = "#cdd6f4"
-frame_color = "#f5a97f"
-timeout = 2
+frame_color = "#fab387"
+timeout = 5
+script = ~/.config/dunst/scripts/notification.sh
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+timeout = 3
+script = ~/.config/dunst/scripts/notification.sh
+
